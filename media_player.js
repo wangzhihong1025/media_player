@@ -24,7 +24,11 @@
         pause.style.display = "none";
     }
     var time = document.getElementById('time');
+    var jindutiao = document.getElementById('jindutiao');
+    var jindu = document.getElementById('jindu');
     video.ontimeupdate = function() {
+        jindutiao.style.width = video.currentTime / 9 + "%";
+
         var currentTime = parseInt(video.currentTime);
         if (currentTime % 60 < 10) {
             currentTime = parseInt(currentTime / 60) + ":0" + currentTime % 60;
