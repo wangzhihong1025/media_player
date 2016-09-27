@@ -26,18 +26,29 @@
     var time = document.getElementById('time');
     video.ontimeupdate = function() {
         var currentTime = parseInt(video.currentTime);
-        if (currentTime%60 < 10) {
-          currentTime = parseInt(currentTime / 60)+":0"+ currentTime%60;
+        if (currentTime % 60 < 10) {
+            currentTime = parseInt(currentTime / 60) + ":0" + currentTime % 60;
         } else {
-          currentTime = parseInt(currentTime / 60)+":"+ currentTime%60;
+            currentTime = parseInt(currentTime / 60) + ":" + currentTime % 60;
         }
         var duration = parseInt(video.duration);
-        if (duration%60 < 10) {
-            duration = parseInt(duration / 60)+":0"+ duration%60;
-            console.log('111')
+        if (duration % 60 < 10) {
+            duration = parseInt(duration / 60) + ":0" + duration % 60;
         } else {
-          duration = parseInt(duration / 60)+":"+ duration%60;
+            duration = parseInt(duration / 60) + ":" + duration % 60;
         }
-        time.innerHTML = currentTime +"/"+ duration; 
+        time.innerHTML = currentTime + "/" + duration;
+    }
+    var sound = document.getElementById('sound');
+    var mute = document.getElementById('mute');
+    sound.onclick = function() {
+        video.muted = true;
+        sound.style.display = "none";
+        mute.style.display = "block";
+    }
+    mute.onclick = function() {
+        video.muted = false;
+        sound.style.display = "block";
+        mute.style.display = "none";
     }
 }(window))

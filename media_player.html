@@ -3,7 +3,7 @@
 
 <head>
     <title></title>
-    <script type="text/javascript" defer src="media player.js"></script>
+    <script type="text/javascript" defer src="media_player.js"></script>
     <style type="text/css">
     #screen_pause {
         position: absolute;
@@ -12,22 +12,38 @@
         display: none;
         z-index: 10;
     }
-    #play{
+    
+    #play {
         position: absolute;
         top: 525px;
         left: 10px;
         display: none;
     }
-    #pause{
+    
+    #pause {
         position: absolute;
         top: 525px;
         left: 10px;
         display: block;
     }
-    #time{
+    
+    #time {
         position: absolute;
         top: 530px;
         left: 50px;
+    }
+    
+    #sound {
+        position: absolute;
+        top: 527px;
+        left: 625px;
+    }
+    
+    #mute {
+        position: absolute;
+        top: 527px;
+        left: 625px;
+        display: none;
     }
     </style>
 </head>
@@ -36,9 +52,12 @@
     <video id="video" src="猪猪侠9 第1集 流畅.mp4" style="width: 800px;height: 550px; "></video>
     <img id="screen_pause" src="screen_pause.jpg" style="width: 150px;height: 150px; ">
     <div>
-        <img id="play" src="play.jpg" style="width: 35px;height: 35px; ">
-        <img id="pause" src="pause.jpg" style="width: 35px;height: 35px; ">
+        <img id="play" src="play.png" style="width: 35px;height: 35px; ">
+        <img id="pause" src="pause.png" style="width: 35px;height: 35px; ">
         <div id="time">0:00/0:00</div>
+        <div id="jindu"></div>
+        <img id="sound" src="sound.png" style="width: 35px;height: 35px; ">
+        <img id="mute" src="mute.png" style="width: 35px;height: 35px; ">
     </div>
 </body>
 
