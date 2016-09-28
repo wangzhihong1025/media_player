@@ -3,6 +3,14 @@
     var screen_pause = document.getElementById('screen_pause');
     var play = document.getElementById('play');
     var pause = document.getElementById('pause');
+    var all = document.getElementById('dilanweizhi');
+    var bg = document.getElementById('bg');
+    bg.onmouseover = function () {
+        all.style.display = "block";
+    }
+    bg.onmouseout = function () {
+        all.style.display = "none";
+    }
     pause.onclick = function() {
         screen_pause.style.display = "none";
         play.style.display = "block";
@@ -42,8 +50,12 @@
         var jinduball = document.getElementById('jinduball');
         var jindutiao = document.getElementById('jindutiao');
         jindutiao.style.width = baifenbi * 480 +"px";
-        jinduball.style.left = baifenbi * 480 + 120 +"px";
+        jinduball.style.left = baifenbi * 480 + 130 +"px";
 
+    }
+    video.onended = function () {
+        play.style.display = "none";
+        pause.style.display = "block";
     }
     var sound = document.getElementById('sound');
     var mute = document.getElementById('mute');
