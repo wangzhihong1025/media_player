@@ -24,11 +24,7 @@
         pause.style.display = "none";
     }
     var time = document.getElementById('time');
-    var jindutiao = document.getElementById('jindutiao');
-    var jindu = document.getElementById('jindu');
     video.ontimeupdate = function() {
-        jindutiao.style.width = video.currentTime / 9 + "%";
-
         var currentTime = parseInt(video.currentTime);
         if (currentTime % 60 < 10) {
             currentTime = parseInt(currentTime / 60) + ":0" + currentTime % 60;
@@ -42,6 +38,12 @@
             duration = parseInt(duration / 60) + ":" + duration % 60;
         }
         time.innerHTML = currentTime + "/" + duration;
+        var baifenbi = video.currentTime / video.duration;
+        var jinduball = document.getElementById('jinduball');
+        var jindutiao = document.getElementById('jindutiao');
+        jindutiao.style.width = baifenbi * 480 +"px";
+        jinduball.style.left = baifenbi * 480 + 120 +"px";
+
     }
     var sound = document.getElementById('sound');
     var mute = document.getElementById('mute');
@@ -55,4 +57,6 @@
         sound.style.display = "block";
         mute.style.display = "none";
     }
+    
+
 }(window))

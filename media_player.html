@@ -45,30 +45,49 @@
         left: 635px;
         display: none;
     }
-    
-    #jindu {
+    #jindu{
         position: absolute;
-        top: 540px;
-        left: 140px;
+        top: 535px;
+        left: 130px;
+        width: 480px;
+        height: 10px;
+        border: 1px solid gray;
+        background-color: gray;
+    }
+    #jindutiao{
+        position: absolute;
+        top: 535px;
+        left: 130px;
+        width: 480px;
+        height: 10px;
+        border: 1px solid gray;
+        background-color: blue;
+    }
+    #jinduball{
+        position: absolute;
+        top: 533px;
+        left: 120px;
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
+        border: 1px solid;
+        background-color: black;
     }
     
-    #jindutiao {
-        position: absolute;
-        top: 1px;
-        left: 0px;
-    }
     </style>
 </head>
 
 <body>
     <video id="video" src="猪猪侠9 第1集 流畅.mp4" controls="" style="width: 800px;height: 550px; "></video>
-    <img id="screen_pause" src="screen_pause.jpg" style="width: 150px;height: 150px; ">
+    <img id="screen_pause" src="pause.png" style="width: 150px;height: 150px; ">
     <div>
         <img id="play" src="play.png" style="width: 35px;height: 35px; ">
         <img id="pause" src="pause.png" style="width: 35px;height: 35px; ">
         <div id="time">0:00/0:00</div>
-        <div id="jindu" style="width: 480px;height: 4px;background-color:grey ">
-            <div id="jindutiao" style="width: 0%; height: 2px;background-color:blue "></div>
+        <div>
+        <div id="jindu"></div>        
+        <div id="jindutiao"></div>
+        <div id="jinduball"></div>
         </div>
         <img id="sound" src="sound.png" style="width: 35px;height: 35px; ">
         <img id="mute" src="mute.png" style="width: 35px;height: 35px; ">
